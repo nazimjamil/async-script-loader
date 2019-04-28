@@ -1,0 +1,11 @@
+# folders
+es/
+lib/
+umd/
+flow-typed/
+node_modules/
+coverage/
+
+# files
+gulpfile.js
+nwb.config.js

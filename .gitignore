@@ -1,0 +1,28 @@
+# dependencies
+/node_modules
+/flow-typed
+
+# build
+/es
+/lib
+/umd
+
+# testing
+/coverage
+*/cypress/results
+*/cypress/screenshots
+*/cypress/videos
+
+# misc
+.DS_Store
+.idea
+.npmrc
+.vscode
+package-lock.json
+expediapartnersolutions-*.tgz
+build.zip
+
+# logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*

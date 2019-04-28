@@ -1,0 +1,10 @@
+{
+  "plugins": [
+    "@babel/plugin-proposal-export-default-from",
+    "transform-es2015-modules-umd"
+  ],
+  "presets": [
+    "@babel/preset-flow",
+    "@babel/preset-env"
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "env": {
+    "jest/globals": true
+  },
+  "extends": [
+    "plugin:flowtype/recommended",
+    "plugin:import/errors"
+  ],
+  "globals": {},
+  "overrides": [],
+  "plugins": [
+    "flowtype",
+    "jest"
+  ],
+  "rules": {
+    "import/no-extraneous-dependencies": [
+      "error",
+      {
+        "devDependencies": true
+      }
+    ],
+    "import/prefer-default-export": 0,
+    "newline-after-var": [
+      "error",
+      "always"
+    ]
+  },
+  "settings": {
+    "import/resolver": {
+      "node": {
+        "moduleDirectory": [
+          ".",
+          "src",
+          "node_modules"
+        ]
+      }
+    }
+  }
+}

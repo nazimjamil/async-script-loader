@@ -1,0 +1,72 @@
+{
+  "name": "async-script-loader",
+  "version": "1.0.0",
+  "description": "Async script loader",
+  "main": "lib/index.js",
+  "repository": "git@github.com:nazimjamil/async-script-loader.git",
+  "author": "Nazim Jamil-Mir <me@nazimjamil.com>",
+  "license": "MIT",
+  "scripts": {
+    "build": "babel src/ -d lib/",
+    "lint": "yarn run eslint --config .eslintrc --ext .js src && yarn run flow",
+    "prepublish": "yarn run build",
+    "test": "yarn run jest --detectOpenHandles --coverage",
+    "test:watch": "yarn run jest --watch"
+  },
+  "files": [
+    "lib"
+  ],
+  "pre-commit": [
+    "lint",
+    "test"
+  ],
+  "jest": {
+    "collectCoverageFrom": [
+      "<rootDir>/src/**/*.{js}"
+    ],
+    "coverageDirectory": "<rootDir>/lib/__coverage__",
+    "moduleDirectories": [
+      ".",
+      "src",
+      "node_modules"
+    ],
+    "moduleFileExtensions": [
+      "js"
+    ],
+    "notify": true,
+    "roots": [
+      "<rootDir>/__tests__"
+    ],
+    "testEnvironment": "node",
+    "verbose": true
+  },
+  "flow-coverage-report": {
+    "globIncludePatterns": [
+      "src/**/*.js"
+    ],
+    "reportTypes": [
+      "text",
+      "html",
+      "json"
+    ],
+    "outputDir": "lib/__coverage__/flow-coverage"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.4.4",
+    "@babel/core": "^7.4.4",
+    "@babel/plugin-proposal-export-default-from": "^7.2.0",
+    "@babel/preset-env": "^7.4.4",
+    "@babel/preset-flow": "^7.0.0",
+    "axios": "^0.18.0",
+    "axios-mock-adapter": "^1.16.0",
+    "babel-eslint": "^10.0.1",
+    "babel-plugin-transform-es2015-modules-umd": "^6.24.1",
+    "eslint": "^5.16.0",
+    "eslint-plugin-flowtype": "^3.6.1",
+    "eslint-plugin-import": "^2.17.2",
+    "eslint-plugin-jest": "^22.5.1",
+    "flow-bin": "^0.98.0",
+    "jest": "^24.7.1",
+    "pre-commit": "^1.2.2"
+  }
+}

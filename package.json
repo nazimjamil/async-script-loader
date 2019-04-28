@@ -1,5 +1,5 @@
 {
-  "name": "async-script-loader",
+  "name": "script-loader-async",
   "version": "1.0.0",
   "description": "Async script loader",
   "main": "lib/index.js",
